@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A71FE184-5CAE-442B-A2B2-F603AE4D81EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Skola</RootNamespace>
+    <AssemblyName>Skola</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Linq">
+      <HintPath>..\packages\NHibernate.Linq.1.0\lib\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160419\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="DodajOcenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajOcenu.Designer.cs">
+      <DependentUpon>DodajOcenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajUcenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajUcenika.Designer.cs">
+      <DependentUpon>DodajUcenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajZaposlenog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajZaposlenog.Designer.cs">
+      <DependentUpon>DodajZaposlenog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entiteti\AngazovanNa.cs" />
+    <Compile Include="Entiteti\Godine.cs" />
+    <Compile Include="Entiteti\ImaClanoveVeca.cs" />
+    <Compile Include="Entiteti\Ocena.cs" />
+    <Compile Include="Entiteti\Predmet.cs" />
+    <Compile Include="Entiteti\Roditelji.cs" />
+    <Compile Include="Entiteti\Smer.cs" />
+    <Compile Include="Entiteti\Telefon.cs" />
+    <Compile Include="Entiteti\Ucenik.cs" />
+    <Compile Include="Entiteti\UciNa.cs" />
+    <Compile Include="Entiteti\Zaposlen.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPredmet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPredmet.Designer.cs">
+      <DependentUpon>FormaPredmet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaRoditelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaRoditelj.Designer.cs">
+      <DependentUpon>FormaRoditelj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaSmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaSmer.Designer.cs">
+      <DependentUpon>FormaSmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaUcenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaUcenik.Designer.cs">
+      <DependentUpon>FormaUcenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaZaposlen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaZaposlen.Designer.cs">
+      <DependentUpon>FormaZaposlen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapiranje\AngazovanNaMapiranje.cs" />
+    <Compile Include="Mapiranje\GodineMapiranje.cs" />
+    <Compile Include="Mapiranje\ImaClanoveVecaMapiranje.cs" />
+    <Compile Include="Mapiranje\OcenaMapiranje.cs" />
+    <Compile Include="Mapiranje\PredmetMapiranje.cs" />
+    <Compile Include="Mapiranje\RoditeljiMapiranje.cs" />
+    <Compile Include="Mapiranje\SmerMapiranje.cs" />
+    <Compile Include="Mapiranje\TelefonMapiranje.cs" />
+    <Compile Include="Mapiranje\UcenikMapiranje.cs" />
+    <Compile Include="Mapiranje\UciNaMapiranje.cs" />
+    <Compile Include="Mapiranje\ZaposlenMapiranje.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DodajOcenu.resx">
+      <DependentUpon>DodajOcenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajUcenika.resx">
+      <DependentUpon>DodajUcenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajZaposlenog.resx">
+      <DependentUpon>DodajZaposlenog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPredmet.resx">
+      <DependentUpon>FormaPredmet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaRoditelj.resx">
+      <DependentUpon>FormaRoditelj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaSmer.resx">
+      <DependentUpon>FormaSmer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaUcenik.resx">
+      <DependentUpon>FormaUcenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaZaposlen.resx">
+      <DependentUpon>FormaZaposlen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Slike\zaposlen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Slike\zaposlen12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Slike\ucenici.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Slike\roditelji.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
